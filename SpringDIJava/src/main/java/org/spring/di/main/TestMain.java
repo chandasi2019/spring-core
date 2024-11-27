@@ -13,7 +13,8 @@ public class TestMain {
         Student std = (Student) context.getBean(Student.class);
         std.display();
         ApplicationContext consContest = new AnnotationConfigApplicationContext(SpringConfigFileCons.class);
-        StudentNew studentNew = (StudentNew) consContest.getBean(StudentNew.class);
+        //StudentNew studentNew = (StudentNew) consContest.getBean(StudentNew.class);//createAddress
+        StudentNew studentNew = (StudentNew) consContest.getBean("getStudent");
         studentNew.display();
     }
 }
